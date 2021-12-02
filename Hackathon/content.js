@@ -1,9 +1,16 @@
-// function spaghetti(){
-    // let a = document.querySelectorAll('a').first()
-        //   a.forEach(e => e.href="https://www.youtube.com/watch?v=oHg5SJYRHA0")
+// let changeColor= document.getElementById("changeColor")
+
+// changeColor.addEventListener("click", async () => {
+//     return spaghetti
+// });
+
+function spaghetti(){
+//     let a = document.querySelectorAll('a').first()
+//         //   a.forEach(e => e.href="https://www.youtube.com/watch?v=oHg5SJYRHA0")
         //   console.log('###hi', a)
         //   document.body.style.backgroundColor = "green"
-        
+          
+
         const printRec = (tag) => {
             const cache = {}
             let count = 0
@@ -25,18 +32,19 @@
         const tagNames = [];
         while(thisHeading = headings.iterateNext()) {
             tagNames.push(thisHeading);
-            console.log(thisHeading.innerText)
+            console.log("##tagNames",tagNames)
           }
-          console.log('##tagnames', tagNames.length-1)
+         // console.log('##tagnames', tagNames.length)
 
-        //   const result = printRec(tagNames[tagNames.length-1])
+          const result = printRec(tagNames[tagNames.length-1])
 
         if (tagNames.length === 1){ 
-            printRec(tagNames[1])()
-           // console.log("tagnames",tagNames[0])
-        //    result()
-        }else if(tagNames.length > 1) {
-            printRec(tagNames[1])()
+            // printRec(tagNames[1])()
+           //console.log("tagnames",tagNames[0])
+           result()
+        }else if(tagNames.length > 0) {
+          //  console.log ("##in else statement", tagNames[0])
+            printRec(tagNames[0])()
         }
 
 
@@ -46,21 +54,21 @@
         //console.log("## tagnames", tagNames); // prints the text content in console
 
 
-        //thisHeading?.click()
-        //   let aTags = document.getElementsByTagName("a");
-        //   let searchText = "Print";
-        //   let found;
+//         thisHeading?.click()
+//           let aTags = document.getElementsByTagName("a");
+//           let searchText = "Print";
+//           let found;
           
-        //   for (let i = 0; i < aTags.length; i++) {
-        //       console.log("### aTags", aTags[i].textContent)
-        //     if (aTags[i].textContent == searchText) {
-        //       found = aTags[i];
-        //       break;
-        //     }
-        //   }
-        //   console.log("### found Meatballs",found)
-        // found?.click()
+//           for (let i = 0; i < aTags.length; i++) {
+//               console.log("### aTags", aTags[i].textContent)
+//             if (aTags[i].textContent == searchText) {
+//               found = aTags[i];
+//               break;
+//             }
+//           }
+//           console.log("### found Meatballs",found)
+//         found?.click()
 
 
-// }
-// spaghetti();
+}
+spaghetti();
